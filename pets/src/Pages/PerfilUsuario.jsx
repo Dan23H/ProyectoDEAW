@@ -2,7 +2,7 @@ import "../css/mensajeria.css";
 export const PerfilUsuario = () => {
   return (
     <>
-      <section style="background-color: #eee;">
+      <section>
         <div class="container py-5" />
         <div class="row">
           <div class="col">

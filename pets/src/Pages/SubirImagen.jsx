@@ -1,4 +1,6 @@
+/*
 import "../css/subirImagen.css";
+
 export const SubirImagen = () => {
   (function ($) {
     $(document).ready(function () {
@@ -131,7 +133,7 @@ export const SubirImagen = () => {
               title: title.val(),
               category: cate.val(),
               images: imageArr,
-              type: 1
+              type: 1,
             };
 
             saveToQueue(newStock);
@@ -143,7 +145,7 @@ export const SubirImagen = () => {
             var newStock = {
               title: topic.val(),
               message: message.val(),
-              type: 2
+              type: 2,
             };
 
             saveToQueue(newStock);
@@ -320,3 +322,4 @@ export const SubirImagen = () => {
     </>
   );
 };
+*/

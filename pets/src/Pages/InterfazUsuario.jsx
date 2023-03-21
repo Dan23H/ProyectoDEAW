@@ -1,6 +1,6 @@
 import "../css/navbar-top-fixed.css";
 import "../css/bootstrap/bootstrap.min.css";
-import { Album } from "../Componentes/Album";
+import { Album } from "../Componentes/";
 export const InterfazUsuario = () => {
   return (
     <>

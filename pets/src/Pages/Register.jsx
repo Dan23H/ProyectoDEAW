@@ -8,7 +8,7 @@ export const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordc, setPasswordc] = useState("");
+  const [passwordc, setPasswordc] = useState(""); // eslint-disable-next-line
   const [datos, setDatos] = useState([]);
 
   const handleNombre = (e) => {
