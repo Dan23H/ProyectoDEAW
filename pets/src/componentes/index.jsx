@@ -1,1 +1,1 @@
-// Archivo barril
+export { Album } from "./Album";
