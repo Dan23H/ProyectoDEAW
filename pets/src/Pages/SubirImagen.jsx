@@ -1,8 +1,7 @@
-/*
+import { Navbar } from "../Componentes";
 import "../css/subirImagen.css";
-
 export const SubirImagen = () => {
-  (function ($) {
+  /*(function ($) {
     $(document).ready(function () {
       generateID();
       choose();
@@ -100,7 +99,7 @@ export const SubirImagen = () => {
           var reader = new FileReader();
           reader.onload = function (event) {
             images.prepend(
-              '<div class="img" style="background-image: url(\'' +
+              '<div className="img" style="background-image: url(\'' +
                 event.target.result +
                 '\');" rel="' +
                 event.target.result +
@@ -133,7 +132,7 @@ export const SubirImagen = () => {
               title: title.val(),
               category: cate.val(),
               images: imageArr,
-              type: 1,
+              type: 1
             };
 
             saveToQueue(newStock);
@@ -145,7 +144,7 @@ export const SubirImagen = () => {
             var newStock = {
               title: topic.val(),
               message: message.val(),
-              type: 2,
+              type: 2
             };
 
             saveToQueue(newStock);
@@ -192,9 +191,9 @@ export const SubirImagen = () => {
             }
 
             notification.append(
-              '<div class="success btn"><p><strong>Success:</strong>' +
+              '<div className="success btn"><p><strong>Success:</strong>' +
                 text +
-                '</p><span><i class="fa fa-times" aria-hidden="true"></i></span></div>'
+                '</p><span><i className="fa fa-times" aria-hidden="true"></i></span></div>'
             );
             queue.splice(0, 1);
           }
@@ -226,20 +225,20 @@ export const SubirImagen = () => {
 
           if (check) {
             notification.append(
-              '<div class="error btn"><p><strong>Error:</strong> Please fill in the form.</p><span><i class="fa fa-times" aria-hidden="true"></i></span></div>'
+              '<div className="error btn"><p><strong>Error:</strong> Please fill in the form.</p><span><i className="fa fa-times" aria-hidden="true"></i></span></div>'
             );
           } else {
             notification.append(
-              '<div class="success btn"><p><strong>Success:</strong> ' +
+              '<div className="success btn"><p><strong>Success:</strong> ' +
                 ID +
-                ' is submitted.</p><span><i class="fa fa-times" aria-hidden="true"></i></span></div>'
+                ' is submitted.</p><span><i className="fa fa-times" aria-hidden="true"></i></span></div>'
             );
             queue.push(stock);
             reset();
           }
         } else {
           notification.append(
-            '<div class="error btn"><p><strong>Error:</strong> Please waiting a queue.</p><span><i class="fa fa-times" aria-hidden="true"></i></span></div>'
+            '<div className="error btn"><p><strong>Error:</strong> Please waiting a queue.</p><span><i className="fa fa-times" aria-hidden="true"></i></span></div>'
           );
         }
       }
@@ -257,26 +256,25 @@ export const SubirImagen = () => {
         var message = $("#msg").val("");
       }
     });
-  })(jQuery);
+  })(jQuery);*/
 
   return (
-    <>
-      {" "}
-      <div class="wrapper">
+    <body className="body">
+      <div className="wrapper">
         <header>
           <h1>Stock photo</h1>
           <span>ID: 5988014</span>
         </header>
 
-        <div class="ways">
+        <div className="ways">
           <ul>
-            <li class="active">submit</li>
+            <li className="active">submit</li>
             <li>discussion</li>
           </ul>
         </div>
 
-        <div class="sections">
-          <section class="active">
+        <div className="sections">
+          <section className="active">
             <input type="text" placeholder="Title" id="title" />
             <select id="category">
               <option value="summmer">summer</option>
@@ -285,13 +283,13 @@ export const SubirImagen = () => {
               <option value="road">road</option>
             </select>
 
-            <div class="select-option">
-              <div class="head">Category</div>
-              <div class="option"></div>
+            <div className="select-option">
+              <div className="head">Category</div>
+              <div className="option"></div>
             </div>
 
-            <div class="images">
-              <div class="pic">add</div>
+            <div className="images">
+              <div className="pic">add</div>
             </div>
           </section>
 
@@ -312,14 +310,21 @@ export const SubirImagen = () => {
           </ul>
         </footer>
       </div>
-      <div class="notification"></div>
+      <div className="notification"></div>
       <footer>
         Inspiration:{" "}
         <a href="https://dribbble.com/shots/2092775-Create-a-new-collection">
-          <i class="fa fa-dribbble" aria-hidden="true"></i>dribbble
+          <i className="fa fa-dribbble" aria-hidden="true"></i>dribbble
         </a>
       </footer>
-    </>
+      <Navbar
+        searchBar={false}
+        current="subir-imagen"
+        item1="Subir Imagen"
+        item2="Mensajeria"
+        item3="Perfil"
+        item4="Tienda"
+      />
+    </body>
   );
 };
-*/
