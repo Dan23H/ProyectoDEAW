@@ -1,4 +1,3 @@
-import "../css/navbar-top-fixed.css";
 import "../css/bootstrap/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
