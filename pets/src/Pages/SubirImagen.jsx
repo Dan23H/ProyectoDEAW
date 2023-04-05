@@ -257,25 +257,18 @@ export const SubirImagen = () => {
       }
     });
   })(jQuery);*/
-
+  const u_counter = 1;
   return (
     <body className="body">
       <div className="wrapper">
         <header>
-          <h1>Stock photo</h1>
-          <span>ID: 5988014</span>
+          <h1>Subir Imagen</h1>
         </header>
-
-        <div className="ways">
-          <ul>
-            <li className="active">submit</li>
-            <li>discussion</li>
-          </ul>
-        </div>
 
         <div className="sections">
           <section className="active">
             <input type="text" placeholder="Title" id="title" />
+            
             <select id="category">
               <option value="summmer">summer</option>
               <option value="winter">winter</option>
