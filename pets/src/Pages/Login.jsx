@@ -22,7 +22,7 @@ export const Login = () => {
 
   return (
     <>
-      <body className="text-center">
+      <body className="body-floating-l text-center">
         <form className="form-signin">
           <div className="text-center mb-4">
             <h1 className="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
