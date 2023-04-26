@@ -1,5 +1,6 @@
 import "../css/bootstrap/bootstrap.min.css";
 import "../css/form-validation.css";
+import { Link } from "react-router-dom";
 export const Compras = () => {
   return (
     <>
