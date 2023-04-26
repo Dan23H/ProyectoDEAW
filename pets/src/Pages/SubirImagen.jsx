@@ -180,6 +180,7 @@ export const SubirImagen = () => {
       <Navbar
         searchBar={false}
         current="subir-imagen"
+        item0="home"
         item1="Subir Imagen"
         item2="Mensajeria"
         item3="Perfil"

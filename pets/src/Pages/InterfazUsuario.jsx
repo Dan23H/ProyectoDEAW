@@ -90,7 +90,8 @@ export const InterfazUsuario = () => {
     <>
       <Navbar
         searchBar={true}
-        current="interfaz-usuario"
+        current="home"
+        item0="home"
         item1="Subir Imagen"
         item2="Mensajeria"
         item3="Perfil"

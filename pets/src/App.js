@@ -9,6 +9,8 @@ import {
   PerfilUsuario,
   TiendaU,
   Compras,
+  TiendaV,
+  InterfazVeterinario
 } from "./Pages";
 
 const App = () => {
@@ -16,7 +18,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/interfaz-usuario" element={<InterfazUsuario />} />
+      <Route path="/home" element={<InterfazUsuario />} />
       <Route path="/subir-imagen" element={<SubirImagen />} />
       <Route path="/mensajeria" element={<Mensajeria />} />
       <Route path="/perfil" element={<PerfilUsuario />} />

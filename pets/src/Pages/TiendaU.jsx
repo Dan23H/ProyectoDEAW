@@ -9,6 +9,7 @@ export const TiendaU = () => {
         <Navbar
           searchBar={true}
           current="tienda"
+          item0="home"
           item1="Subir Imagen"
           item2="Mensajeria"
           item3="Perfil"

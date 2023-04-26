@@ -331,7 +331,7 @@ export const Compras = () => {
                   </div>
                 </div>
                 <hr class="mb-4" />
-                <Link to='/interfaz-usuario'>
+                <Link to='/home'>
                   <button class="btn btn-primary btn-lg btn-block" type="submit">
                     Continue to checkout
                   </button>
