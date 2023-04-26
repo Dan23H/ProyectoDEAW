@@ -67,7 +67,7 @@ export const Login = () => {
               </small>
             </label>
           </div>
-          <Link to="/interfaz-usuario">
+          <Link to="/home">
             <button
               className="btn btn-lg btn-primary btn-block"
               onClick={() => confirmmation()}

@@ -214,6 +214,7 @@ export const Mensajeria = () => {
         <Navbar
           searchBar={false}
           current="mensajeria"
+          item0="home"
           item1="Subir Imagen"
           item2="Mensajeria"
           item3="Perfil"
