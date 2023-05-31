@@ -57,18 +57,35 @@ export const SubirImagen = () => {
     setShowImages(false)
   }
 
-  const handleSave = () => {
-    save = {
-      images: images,
-      title: title,
-      description: description
-    }
-    alert('La imagen ha sido publicada exitosamente!')
-    setImages([])
-    setTitle('')
-    setDescription('')
-    setShowImages(false)
-    navigate("/interfaz-usuario")
+  const handleSave = (e) => {
+    e.preventDefault()
+    const formData = new FormData();
+    formData.append("imagen", images[0].file);
+    formData.append("titulo", title);
+    formData.append("descripcion", description);
+    console.log(images)
+    fetch("https://vetbackend.onrender.com/subirimagen", {
+      method: "POST",
+      headers: {
+        'enctype': 'multipart/form-data',
+        // 'Content-Type': 'application/json',
+      },
+      // body: JSON.stringify(body),
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        alert("La imagen ha sido publicada exitosamente!");
+        setImages([]);
+        setTitle("");
+        setDescription("");
+        setShowImages(false)
+        navigate("/interfaz-usuario");
+        //console.log(image.file)
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   }
 
   return (
@@ -86,7 +103,7 @@ export const SubirImagen = () => {
                 placeholder="Título"
                 id="title"
                 onChange={(event) => handleTitle(event)}
-                title="Ponle un buen nombre a tus obras!"
+                title="Ponle un buen título a tu foto!"
                 value={title}
                 required
               />
@@ -97,7 +114,7 @@ export const SubirImagen = () => {
                 id="description"
                 maxLength={500}
                 onChange={(event) => handleDescription(event)}
-                title="Enséñale al mundo el significado de tus obras!"
+                title="Dale al mundo el contexto de la foto!"
                 value={description}
               />
 
@@ -109,7 +126,6 @@ export const SubirImagen = () => {
                 placeholder="Imagen"
                 onChange={(event) => handleImagen(event)}
                 required
-                multiple
               />
 
               <div className="d-flex align-items-center">
